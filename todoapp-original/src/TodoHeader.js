@@ -1,7 +1,7 @@
 import React from 'react'
 
 const TodoHeader = (props) => (
-  <header className="header">
+  <header>
     <h1 className="title">todos</h1>
     <input
       className="new-todo"
