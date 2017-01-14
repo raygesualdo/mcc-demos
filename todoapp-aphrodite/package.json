@@ -6,6 +6,7 @@
     "react-scripts": "0.8.4"
   },
   "dependencies": {
+    "aphrodite": "^1.1.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "uuid": "^3.0.1"
