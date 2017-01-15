@@ -1,0 +1,241 @@
+title: {
+	position: 'absolute',
+	top: '-155px',
+	width: '100%',
+	fontSize: '100px',
+	fontWeight: '100',
+	textAlign: 'center',
+	color: 'rgba(175, 47, 47, 0.15)',
+	-webkit-textRendering: 'optimizeLegibility',
+	-moz-textRendering: 'optimizeLegibility',
+	textRendering: 'optimizeLegibility',
+},
+
+newTodo: {
+	position: 'relative',
+	margin: '0',
+	width: '100%',
+	fontSize: '24px',
+	fontFamily: 'inherit',
+	fontWeight: 'inherit',
+	lineHeight: '1.4em',
+	outline: 'none',
+	color: 'inherit',
+	padding: '16px 16px 16px 60px',
+	border: 'none',
+	background: 'rgba(0, 0, 0, 0.003)',
+	boxShadow: 'inset 0 -2px 1px rgba(0,0,0,0.03)',
+	boxSizing: 'border-box',
+	fontSmoothing: 'antialiased',
+},
+
+newTodo::-webkit-input-placeholder: {
+	fontStyle: 'italic',
+	fontWeight: '300',
+	color: '#e6e6e6',
+},
+
+newTodo::-moz-placeholder: {
+	fontStyle: 'italic',
+	fontWeight: '300',
+	color: '#e6e6e6',
+},
+
+newTodo::input-placeholder: {
+	fontStyle: 'italic',
+	fontWeight: '300',
+	color: '#e6e6e6',
+},
+
+main: {
+	position: 'relative',
+	zIndex: '2',
+	borderTop: '1px solid #e6e6e6',
+},
+
+toggleAll: {
+	position: 'absolute',
+	top: '-55px',
+	left: '-12px',
+	width: '60px',
+	height: '34px',
+	textAlign: 'center',
+	border: 'none',
+},
+
+toggleAll:before: {
+	content: '❯',
+	fontSize: '22px',
+	color: '#e6e6e6',
+	padding: '10px 27px 10px 27px',
+},
+
+toggleAll:checked:before: {
+	color: '#737373',
+},
+
+@media screen and (-webkit-min-device-pixel-ratio:0): {
+	.toggleAll: {
+		background: 'none',
+		-webkitTransform: 'rotate(90deg)',
+		transform: 'rotate(90deg)',
+		-webkitAppearance: 'none',
+		appearance: 'none',
+	},
+},
+
+todoList: {
+	margin: '0',
+	padding: '0',
+	listStyle: 'none',
+},
+
+todoItem: {
+	position: 'relative',
+	fontSize: '24px',
+	borderBottom: '1px solid #ededed',
+	':last-child': {
+		borderBottom: 'none',
+	},
+},
+
+toggle: {
+	textAlign: 'center',
+	width: '40px',
+	height: 'auto',
+	position: 'absolute',
+	top: '0',
+	bottom: '0',
+	margin: 'auto 0',
+	border: 'none',
+	appearance: 'none',
+	':after': {
+		content: 'url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#ededed" stroke-width="3"/></svg>')',
+	},
+	':checked:after': {
+		content: 'url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="-10 -18 100 135"><circle cx="50" cy="50" r="50" fill="none" stroke="#bddad5" stroke-width="3"/><path fill="#5dc2af" d="M72 25L42 71 27 56l-4 4 20 20 34-52z"/></svg>')',
+	},
+	'@media screen and (-webkit-min-device-pixel-ratio:0)': {
+		background: 'none',
+		height: '40px',
+	},
+},
+
+todoLabel: {
+	whiteSpace: 'pre-line',
+	wordBreak: 'break-all',
+	padding: '15px 60px 15px 15px',
+	marginLeft: '45px',
+	display: 'block',
+	lineHeight: '1.2',
+	transition: 'color 0.4s',
+},
+
+todoItem.completed .todoLabel: {
+	color: '#d9d9d9',
+	textDecoration: 'line-through',
+},
+
+destroy: {
+	display: 'none',
+	position: 'absolute',
+	top: '0',
+	right: '10px',
+	bottom: '0',
+	width: '40px',
+	height: '40px',
+	margin: 'auto 0',
+	fontSize: '30px',
+	color: '#cc9a9a',
+	marginBottom: '11px',
+	transition: 'color 0.2s ease-out',
+	':hover': {
+		color: '#af5b5e',
+	},
+	':after': {
+		content: '×',
+	},
+},
+
+
+todoItem:hover .destroy: {
+	display: 'block',
+},
+
+footer: {
+	color: '#777',
+	padding: '10px 15px',
+	height: '20px',
+	textAlign: 'center',
+	borderTop: '1px solid #e6e6e6',
+	':before': {
+		content: '""';
+		position: 'absolute',
+		right: '0',
+		bottom: '0',
+		left: '0',
+		height: '50px',
+		overflow: 'hidden',
+		boxShadow: '0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2)',
+	},
+},
+
+todoCount: {
+	float: 'left',
+	textAlign: 'left',
+},
+
+filters: {
+	margin: '0',
+	padding: '0',
+	listStyle: 'none',
+	position: 'absolute',
+	right: '0',
+	left: '0',
+},
+
+filters li: {
+	display: 'inline',
+},
+
+filters li a: {
+	color: 'inherit',
+	margin: '3px',
+	padding: '3px 7px',
+	textDecoration: 'none',
+	border: '1px solid transparent',
+	borderRadius: '3px',
+	':hover': {
+		borderColor: 'rgba(175, 47, 47, 0.1)',
+	},
+},
+
+filters li a.selected: {
+	borderColor: 'rgba(175, 47, 47, 0.2)',
+},
+
+clearCompleted: {
+	float: 'right',
+	position: 'relative',
+	lineHeight: '20px',
+	textDecoration: 'none',
+	cursor: 'pointer',
+	position: 'relative',
+	':hover': {
+		textDecoration: 'underline',
+	},
+},
+
+reactLogo: {
+  animation: 'react-logo-spin infinite 20s linear',
+	position: 'absolute',
+	bottom: '-120px',
+	left: '50%',
+  width: '120px',
+	marginLeft: '-60px',
+},
+
+@keyframes react-logo-spin: {
+  from: { transform: rotate(0deg); },
+  to: { transform: rotate(360deg); },
+},
