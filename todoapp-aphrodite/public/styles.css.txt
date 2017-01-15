@@ -194,11 +194,11 @@ filters: {
 	left: '0',
 },
 
-filters li: {
+filter: {
 	display: 'inline',
 },
 
-filters li a: {
+filterLink: {
 	color: 'inherit',
 	margin: '3px',
 	padding: '3px 7px',
@@ -210,7 +210,7 @@ filters li a: {
 	},
 },
 
-filters li a.selected: {
+filterLink.selected: {
 	borderColor: 'rgba(175, 47, 47, 0.2)',
 },
 
