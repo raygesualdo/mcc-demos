@@ -12,20 +12,20 @@ const TodoFooter = (props) => {
         {props.activeCount} {activeTodoWord} left
       </span>
       <ul className="filters">
-        <li>
-          <a href="#/" className={isAll ? 'selected' : ''}>
+        <li className="filter">
+          <a href="#/" className={`filter-link ${isAll && 'selected'}`}>
             All
           </a>
         </li>
         {' '}
-        <li>
-          <a href="#/active" className={isActive ? 'selected' : ''}>
+        <li className="filter">
+          <a href="#/active" className={`filter-link ${isActive && 'selected'}`}>
             Active
           </a>
         </li>
         {' '}
-        <li>
-          <a href="#/completed" className={isCompleted ? 'selected' : ''}>
+        <li className="filter">
+          <a href="#/completed" className={`filter-link ${isCompleted && 'selected'}`}>
             Completed
           </a>
         </li>
