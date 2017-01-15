@@ -169,7 +169,7 @@ footer: {
 	textAlign: 'center',
 	borderTop: '1px solid #e6e6e6',
 	':before': {
-		content: '""';
+		content: '""',
 		position: 'absolute',
 		right: '0',
 		bottom: '0',
@@ -220,7 +220,6 @@ clearCompleted: {
 	lineHeight: '20px',
 	textDecoration: 'none',
 	cursor: 'pointer',
-	position: 'relative',
 	':hover': {
 		textDecoration: 'underline',
 	},
@@ -236,6 +235,6 @@ reactLogo: {
 },
 
 @keyframes react-logo-spin: {
-  from: { transform: rotate(0deg); },
-  to: { transform: rotate(360deg); },
+  from: { transform: 'rotate(0deg)' },
+  to: { transform: 'rotate(360deg)' },
 },
